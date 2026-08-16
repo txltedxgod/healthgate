@@ -1,0 +1,17 @@
+interval: 10s
+
+http_targets:
+  - url: "https://httpbin.org/status/200"
+    expected_status: 200
+  - url: "https://github.com"
+    expected_status: 200
+
+tcp_targets:
+  - address: "1.1.1.1:53"
+  - address: "8.8.8.8:53"
+
+dns_targets:
+  - host: "google.com"
+    server: "8.8.8.8:53"
+  - host: "cloudflare.com"
+    server: "1.1.1.1:53"
